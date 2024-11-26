@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/screens/homescreen.dart';
+import 'package:movie_app/screens/morescreen.dart';
+import 'package:movie_app/screens/searchscreen.dart';
 
 class ButtomNavBar extends StatelessWidget {
   const ButtomNavBar({super.key});
@@ -30,6 +33,13 @@ class ButtomNavBar extends StatelessWidget {
               indicatorColor: Colors.transparent,
               unselectedLabelColor: Color(0xff999999),
             ),
+          ),
+          body: TabBarView(
+            children: [
+              HomeScreen(),
+              SearchScreen(),
+              MoreScreen(),
+            ],
           ),
         ));
   }
